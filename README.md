@@ -11,7 +11,7 @@
 ![Vite](https://img.shields.io/badge/Vite-5.x-purple?logo=vite)
 
 <div align="center" style="margin: 24px 0;">
-  <a href="https://ardelingga.github.io/react-ui-components/app/" target="_blank" rel="noopener noreferrer" style="font-size:2rem; font-weight:bold; color:#2563eb; text-decoration:none; margin-right:24px;">
+  <a href="https://ardelingga.github.io/react-ui-components/" target="_blank" rel="noopener noreferrer" style="font-size:2rem; font-weight:bold; color:#2563eb; text-decoration:none; margin-right:24px;">
     🚀 Live Demo
   </a>
   <a href="https://ardelingga.github.io/react-ui-components/storybook/" target="_blank" rel="noopener noreferrer" style="font-size:2rem; font-weight:bold; color:#db2777; text-decoration:none;">
