@@ -1,51 +1,36 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 # React UI Components
 
-Portfolio showcase untuk komponen UI modern yang dibangun dengan React, TailwindCSS, dan Storybook.
+> A comprehensive, modern React component library built with TypeScript, Tailwind CSS, and Storybook for professional web applications.
 
-## 🚀 Technology Stack
+<div align="center">
 
-- **React 18** - Modern React dengan Hooks
-- **TypeScript** - Type safety dan better developer experience
-- **TailwindCSS** - Utility-first CSS framework
-- **Storybook** - Component documentation dan testing
-- **Vite** - Fast build tool dan development server
+![React](https://img.shields.io/badge/React-18.x-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-blue?logo=tailwindcss)
+![Storybook](https://img.shields.io/badge/Storybook-7.x-pink?logo=storybook)
+![Vite](https://img.shields.io/badge/Vite-5.x-purple?logo=vite)
 
-## 📦 Components
+[Live Demo](https://your-demo-url.vercel.app) • [Storybook](https://your-storybook-url.vercel.app) • [Documentation](#documentation)
 
-### Button Component
-Modern button component dengan multiple variants dan states:
+</div>
 
-- **Variants**: `primary`, `secondary`, `outline`, `ghost`, `destructive`
-- **Sizes**: `sm`, `md`, `lg`, `xl`
-- **States**: `disabled`, `loading`
-- **Features**: Hover effects, focus states, loading spinner
+## ✨ Features
 
-### Card Component
-Versatile card component dengan layout yang fleksibel:
+- 🎨 **25+ Production-Ready Components** - Comprehensive component library
+- 🔧 **Full TypeScript Support** - Type-safe development experience
+- 🎭 **Dark Mode Ready** - Built-in dark mode support
+- 📱 **Responsive Design** - Mobile-first approach
+- ♿ **Accessibility First** - WCAG compliant components
+- 📚 **Comprehensive Documentation** - Detailed Storybook stories
+- 🚀 **Performance Optimized** - Tree-shakeable and lightweight
+- 🎪 **Customizable** - Easy to theme and extend
 
-- **Variants**: `default`, `outlined`, `elevated`, `filled`
-- **Padding**: `none`, `sm`, `md`, `lg`, `xl`
-- **Features**: Hoverable, clickable, compound components
-- **Sub-components**: `Card.Header`, `Card.Content`, `Card.Footer`
-
-## 🛠️ Development
-
-### Prerequisites
-- Node.js (v16 atau lebih baru)
-- npm atau yarn
+## 🚀 Quick Start
 
 ### Installation
+
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/ardelingga/react-ui-components.git
 cd react-ui-components
 
@@ -53,7 +38,8 @@ cd react-ui-components
 npm install
 ```
 
-### Development Commands
+### Development
+
 ```bash
 # Start development server
 npm run dev
@@ -63,154 +49,262 @@ npm run storybook
 
 # Build for production
 npm run build
-
-# Preview production build
-npm run preview
-
-# Lint code
-npm run lint
 ```
 
-## 📖 Storybook
+## 📦 Component Library
 
-Akses dokumentasi lengkap dan interactive playground di Storybook:
+### 🎛️ Form Components
 
-```bash
-npm run storybook
-```
+- **Button** - Multiple variants with loading states
+- **Input** - Text inputs with validation styling
+- **Label** - Form labels with required indicators
+- **Form** - Complete form system with validation
+- **Checkbox** - Custom styled checkboxes
+- **Select** - Dropdown select component
+- **Toggle** - Switch toggle component
+- **ToggleGroup** - Grouped toggle selections
 
-Buka browser di `http://localhost:6006` untuk melihat:
-- Semua component variants
-- Interactive controls
-- Documentation dan props
-- Usage examples
+### 🗂️ Layout Components
 
-## 🎨 Design System
+- **Card** - Flexible card container with sections
+- **Modal** - Dialog modals with animations
+- **Sheet** - Slide-out panels
+- **Dialog** - Confirmation and alert dialogs
+- **Collapsible** - Expandable content areas
+- **Separator** - Content dividers
 
-### Color Palette
-- **Primary**: Blue (`bg-blue-600`, `hover:bg-blue-700`)
-- **Secondary**: Gray (`bg-gray-100`, `hover:bg-gray-200`)
-- **Destructive**: Red (`bg-red-600`, `hover:bg-red-700`)
+### 🧭 Navigation Components
 
-### Typography
-- **Font Family**: System fonts (sans-serif)
-- **Font Weights**: Normal (400), Medium (500), Semibold (600), Bold (700)
+- **NavigationMenu** - Multi-level navigation with dropdowns
+- **Breadcrumb** - Hierarchical navigation
+- **DropdownMenu** - Context menus and dropdowns
 
-### Spacing
-- **Small**: `0.75rem` (12px)
-- **Medium**: `1rem` (16px)
-- **Large**: `1.5rem` (24px)
-- **Extra Large**: `2rem` (32px)
+### 📊 Data Display Components
 
-## 📁 Project Structure
+- **Table** - Sortable tables with responsive design
+- **Avatar** - User avatars with fallbacks
+- **Badge** - Status indicators and labels
+- **Alert** - Notification and alert messages
+- **Skeleton** - Loading state placeholders
 
-```
-src/
-├── components/
-│   ├── Button/
-│   │   ├── Button.tsx
-│   │   └── Button.stories.tsx
-│   ├── Card/
-│   │   ├── Card.tsx
-│   │   └── Card.stories.tsx
-│   └── index.ts
-├── App.tsx
-└── main.tsx
-```
+### 💬 Feedback Components
+
+- **Tooltip** - Contextual information tooltips
+- **Icon** - Lucide React icon integration
+
+### 📄 Complete Pages
+
+- **Home Page** - Landing page with hero section
+- **Login Page** - Authentication with social login
+- **Register Page** - User registration with validation
 
 ## 💡 Usage Examples
 
-### Button Component
-```tsx
-import { Button } from './components';
+### Basic Button Usage
 
-// Basic usage
+```tsx
+import { Button } from './components/Button/Button';
+
+// Primary button
 <Button variant="primary" size="md">
-  Click me
+  Save Changes
 </Button>
 
-// With loading state
+// Loading state
 <Button variant="primary" loading>
   Processing...
 </Button>
 
 // With icon
 <Button variant="outline">
-  <Icon />
-  Save File
+  <Icon iconNode={Download} className="mr-2 h-4 w-4" />
+  Download
 </Button>
 ```
 
 ### Card Component
+
 ```tsx
-import { Card } from './components';
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+} from "./components/Card/Card";
 
-// Basic card
-<Card variant="outlined">
-  <p>Simple card content</p>
-</Card>
-
-// Complex card with sections
-<Card variant="elevated" hoverable>
-  <Card.Header>
-    <h3>Card Title</h3>
-  </Card.Header>
-  <Card.Content>
-    <p>Card content goes here</p>
-  </Card.Content>
-  <Card.Footer>
-    <Button>Action</Button>
-  </Card.Footer>
-</Card>
+<Card className="w-full max-w-md">
+  <CardHeader>
+    <h3 className="text-lg font-semibold">Product Card</h3>
+  </CardHeader>
+  <CardContent>
+    <p>Detailed product description goes here.</p>
+  </CardContent>
+  <CardFooter>
+    <Button className="w-full">Add to Cart</Button>
+  </CardFooter>
+</Card>;
 ```
 
-## 🎯 Features
+### Form Components
 
-- ✅ **Type Safe** - Full TypeScript support
-- ✅ **Responsive** - Mobile-first design
-- ✅ **Accessible** - ARIA compliant
-- ✅ **Customizable** - Easy to extend dan customize
-- ✅ **Well Documented** - Comprehensive Storybook docs
-- ✅ **Modern** - Latest React patterns dan hooks
-- ✅ **Performance** - Optimized bundle size
+```tsx
+import { Form, FormField, FormLabel, FormInput } from "./components/Form/Form";
+
+<Form onSubmit={handleSubmit}>
+  <FormField>
+    <FormLabel htmlFor="email" required>
+      Email
+    </FormLabel>
+    <FormInput
+      id="email"
+      type="email"
+      placeholder="Enter your email"
+      required
+    />
+  </FormField>
+  <Button type="submit">Submit</Button>
+</Form>;
+```
+
+### Data Table
+
+```tsx
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "./components/Table/Table";
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead sortable onSort={() => handleSort("name")}>
+        Name
+      </TableHead>
+      <TableHead sortable onSort={() => handleSort("email")}>
+        Email
+      </TableHead>
+      <TableHead>Status</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {users.map((user) => (
+      <TableRow key={user.id}>
+        <TableCell>{user.name}</TableCell>
+        <TableCell>{user.email}</TableCell>
+        <TableCell>
+          <Badge variant={user.active ? "success" : "secondary"}>
+            {user.active ? "Active" : "Inactive"}
+          </Badge>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>;
+```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Alert/
+│   │   ├── Alert.tsx
+│   │   └── Alert.stories.tsx
+│   ├── Button/
+│   │   ├── Button.tsx
+│   │   └── Button.stories.tsx
+│   ├── Card/
+│   │   ├── Card.tsx
+│   │   └── Card.stories.tsx
+│   └── ... (other components)
+├── pages/
+│   ├── Home/
+│   ├── LoginPage/
+│   └── RegisterPage/
+├── lib/
+│   └── utils.ts
+├── App.tsx
+└── main.tsx
+```
+
+## 🧪 Testing & Documentation
+
+### Storybook Stories
+
+Every component includes comprehensive Storybook stories:
+
+- Default states
+- All variants and sizes
+- Interactive examples
+- Responsive previews
+- Accessibility testing
+- Dark mode examples
+
+```bash
+# Run Storybook
+npm run storybook
+```
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-```bash
-# Install Vercel CLI
-npm i -g vercel
+### Build Commands
 
-# Deploy
-vercel
-```
-
-### Netlify
 ```bash
-# Build project
+# Production build
 npm run build
 
-# Upload dist/ folder to Netlify
+# Preview build locally
+npm run preview
+
+# Build Storybook
+npm run build-storybook
 ```
 
-## 📈 Roadmap
+## 🛠️ Development Scripts
 
-- [ ] Form components (Input, Select, Checkbox, Radio)
-- [ ] Modal dan Dialog components
-- [ ] Table component dengan sorting dan filtering
-- [ ] Toast notification system
-- [ ] Dark mode support
-- [ ] Animation dan transitions
-- [ ] Unit testing dengan Jest
-- [ ] E2E testing dengan Playwright
+```bash
+# Development
+npm run dev              # Start dev server
+npm run storybook        # Start Storybook
+
+# Building
+npm run build            # Build for production
+npm run build-storybook  # Build Storybook
+
+# Code Quality
+npm run lint             # Run ESLint
+npm run type-check       # TypeScript type checking
+```
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 🤝 Contributing
 
-1. Fork repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
+We welcome contributions! Please follow these steps:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'feat: add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Include Storybook stories for new components
+- Maintain responsive design principles
+- Ensure accessibility compliance
+- Write meaningful commit messages
 
 ## 📄 License
 
@@ -219,38 +313,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Ardelingga Pramesta Kusuma**
+
 - GitHub: [@ardelingga](https://github.com/ardelingga)
-- LinkedIn: [Your LinkedIn Profile]
+- LinkedIn: [Ardelingga Pramesta Kusuma](https://linkedin.com/in/ardelingga)
+- Portfolio: [ardelingga.dev](https://ardelingga.dev)
+
+## 🙏 Acknowledgments
+
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [Radix UI](https://radix-ui.com/) for accessible component primitives
+- [Lucide React](https://lucide.dev/) for beautiful icons
+- [Class Variance Authority](https://cva.style/) for variant management
+- [Storybook](https://storybook.js.org/) for component documentation
 
 ---
 
-⭐ Star this repository jika berguna untuk project Anda!
+<div align="center">
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⭐ **Star this repository if it helped you!** ⭐
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Made with ❤️ and ☕ by [Ardelingga](https://github.com/ardelingga)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+</div>
