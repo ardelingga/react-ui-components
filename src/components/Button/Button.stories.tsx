@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
 import { Button } from './Button';
 
 const meta = {
-  title: 'Components/Button/All Variants',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
