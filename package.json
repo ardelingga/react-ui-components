@@ -1,15 +1,19 @@
 {
+  "homepage": "https://ardelingga.github.io/react-ui-components",
   "name": "react-ui-components",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build && npm run build-storybook",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static -b gh-pages --add --dotfiles -s . --dest storybook"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
@@ -35,6 +39,7 @@
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@storybook/react-vite": "^9.1.6",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -42,6 +47,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-storybook": "^9.1.6",
+    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "storybook": "^9.1.6",
     "typescript": "~5.8.3",

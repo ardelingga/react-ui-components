@@ -10,7 +10,16 @@
 ![Storybook](https://img.shields.io/badge/Storybook-7.x-pink?logo=storybook)
 ![Vite](https://img.shields.io/badge/Vite-5.x-purple?logo=vite)
 
-[Live Demo](https://your-demo-url.vercel.app) • [Storybook](https://your-storybook-url.vercel.app) • [Documentation](#documentation)
+[Live Demo](https://ardelingga.github.io/react-ui-components/) • [Storybook](https://ardelingga.github.io/react-ui-components/storybook)
+
+<div align="center" style="margin: 24px 0;">
+  <a href="https://ardelingga.github.io/react-ui-components/" style="font-size:2rem; font-weight:bold; color:#2563eb; text-decoration:none; margin-right:24px;">
+    🚀 Live Demo
+  </a>
+  <a href="https://ardelingga.github.io/react-ui-components/storybook/" style="font-size:2rem; font-weight:bold; color:#db2777; text-decoration:none;">
+    📚 Storybook
+  </a>
+</div>
 
 </div>
 

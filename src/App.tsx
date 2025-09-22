@@ -27,11 +27,6 @@ import { Home } from './pages/Home/Home';
 import {
   Github,
   ExternalLink,
-  Code,
-  Palette,
-  Zap,
-  Shield,
-  Smartphone,
   Eye,
   BookOpen,
   Layout,
@@ -39,7 +34,6 @@ import {
   MousePointer,
   Type,
   Calendar,
-  User,
   Heart,
   Coffee,
   SquareStackIcon
@@ -50,46 +44,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [showLoginPage, setShowLoginPage] = useState(false);
   const [showRegisterPage, setShowRegisterPage] = useState(false);
-
-  // Sample data
-  const features = [
-    {
-      icon: Code,
-      title: 'Rich Component Library',
-      description: '25+ production-ready components with TypeScript support',
-      badge: '25+ Components'
-    },
-    {
-      icon: Palette,
-      title: 'Design System',
-      description: 'Consistent design tokens with Tailwind CSS integration',
-      badge: 'Design System'
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimized',
-      description: 'Tree-shakeable components with minimal bundle size',
-      badge: 'Optimized'
-    },
-    {
-      icon: Shield,
-      title: 'Type Safe',
-      description: 'Full TypeScript support with comprehensive type definitions',
-      badge: 'TypeScript'
-    },
-    {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Mobile-first approach with responsive breakpoints',
-      badge: 'Responsive'
-    },
-    {
-      icon: Eye,
-      title: 'Accessible',
-      description: 'WCAG compliant components with proper ARIA support',
-      badge: 'A11y'
-    }
-  ];
 
   const componentCategories = [
     {
@@ -135,13 +89,6 @@ function App() {
       description: 'User registration with form validation',
       action: () => setShowRegisterPage(true)
     }
-  ];
-
-  const stats = [
-    { label: 'Components', value: '25+', icon: SquareStackIcon },
-    { label: 'Stories', value: '100+', icon: BookOpen },
-    { label: 'Examples', value: '200+', icon: Code },
-    { label: 'Contributors', value: '1', icon: User }
   ];
 
   if (showLoginPage) {
@@ -213,11 +160,11 @@ function App() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <Button variant="secondary" size="sm">
+                <Button className='cursor-pointer' onClick={() => window.open('https://github.com/ardelingga/react-ui-components', '_blank')} variant="secondary" size="sm">
                   <Icon iconNode={Github} className="h-4 w-4 mr-2" />
                   GitHub
                 </Button>
-                <Button variant="secondary" size="sm">
+                <Button className='cursor-pointer' onClick={() => window.open('https://ardelingga.github.io/react-ui-components/storybook', '_blank')} variant="secondary" size="sm">
                   <Icon iconNode={BookOpen} className="h-4 w-4 mr-2" />
                   Storybook
                 </Button>
@@ -244,7 +191,7 @@ function App() {
               </Tooltip>
             </div>
 
-            <h1 className="text-6xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold dark:text-white mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               React UI Components
             </h1>
 
@@ -255,66 +202,25 @@ function App() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Button size="lg" onClick={() => setShowModal(true)}>
+              <Button className='cursor-pointer' variant="secondary" size="lg" onClick={() => setShowModal(true)}>
                 <Icon iconNode={Eye} className="h-5 w-5 mr-2" />
                 View Components
               </Button>
-              <Button variant="secondary" size="lg" onClick={() => setShowLoginPage(true)}>
-                <Icon iconNode={ExternalLink} className="h-5 w-5 mr-2" />
-                Live Demo
+              <Button className='cursor-pointer' variant="secondary" onClick={() => window.open('https://ardelingga.github.io/react-ui-components/storybook', '_blank')}>
+                <Icon iconNode={ExternalLink} className="h-4 w-4 mr-2" />
+                Open Storybook
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button onClick={() => window.open('https://github.com/ardelingga/react-ui-components', '_blank')} className='cursor-pointer' variant="secondary" size="lg">
                 <Icon iconNode={Github} className="h-5 w-5 mr-2" />
                 Source Code
               </Button>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <Icon iconNode={stat.icon} className="h-8 w-8 mx-auto mb-2 text-blue-600" />
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-20 px-4 bg-white dark:bg-gray-800">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Our Components?</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Built with modern web standards and best practices for professional applications
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <Icon iconNode={feature.icon} className="h-10 w-10 text-blue-600" />
-                      <Badge variant="secondary">{feature.badge}</Badge>
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Component Categories */}
-        <section className="py-20 px-4">
+        <section className="py-2 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Component Library</h2>
@@ -358,8 +264,8 @@ function App() {
                   <CardContent>
                     <div className="space-y-3">
                       <Button size="sm">Primary Button</Button>
-                      <Button variant="secondary" size="sm">Secondary</Button>
-                      <Button variant="secondary" size="sm">Outline</Button>
+                      <Button className='ml-2' variant="secondary" size="sm">Secondary</Button>
+                      <Button className='ml-2' variant="secondary" size="sm">Outline</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -420,7 +326,7 @@ function App() {
                     <p className="text-gray-600 dark:text-gray-300">{page.description}</p>
                   </CardHeader>
                   <CardFooter>
-                    <Button className="w-full" onClick={page.action}>
+                    <Button className="w-full cursor-pointer" onClick={page.action}>
                       <Icon iconNode={Eye} className="h-4 w-4 mr-2" />
                       View Page
                     </Button>
@@ -495,7 +401,7 @@ function App() {
             <Button variant="secondary" onClick={() => setShowModal(false)}>
               Close
             </Button>
-            <Button>
+            <Button onClick={() => window.open('https://ardelingga.github.io/react-ui-components/storybook', '_blank')}>
               <Icon iconNode={ExternalLink} className="h-4 w-4 mr-2" />
               Open Storybook
             </Button>
