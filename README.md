@@ -10,8 +10,6 @@
 ![Storybook](https://img.shields.io/badge/Storybook-7.x-pink?logo=storybook)
 ![Vite](https://img.shields.io/badge/Vite-5.x-purple?logo=vite)
 
-[Live Demo](https://ardelingga.github.io/react-ui-components/) • [Storybook](https://ardelingga.github.io/react-ui-components/storybook)
-
 <div align="center" style="margin: 24px 0;">
   <a href="https://ardelingga.github.io/react-ui-components/" style="font-size:2rem; font-weight:bold; color:#2563eb; text-decoration:none; margin-right:24px;">
     🚀 Live Demo
