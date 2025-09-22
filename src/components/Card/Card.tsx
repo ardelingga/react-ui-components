@@ -1,119 +1,68 @@
-import React from 'react';
+import * as React from "react"
 
-export interface CardProps {
-  /** Card variant */
-  variant?: 'default' | 'outlined' | 'elevated' | 'filled';
-  /** Card padding */
-  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
-  /** Card hover effect */
-  hoverable?: boolean;
-  /** Card clickable state */
-  clickable?: boolean;
-  /** Card content */
-  children: React.ReactNode;
-  /** Additional CSS classes */
-  className?: string;
-  /** Optional click handler */
-  onClick?: () => void;
-}
+import { cn } from "../../utils/utils"
 
-export interface CardHeaderProps {
-  /** Header content */
-  children: React.ReactNode;
-  /** Additional CSS classes */
-  className?: string;
-}
-
-export interface CardContentProps {
-  /** Content */
-  children: React.ReactNode;
-  /** Additional CSS classes */
-  className?: string;
-}
-
-export interface CardFooterProps {
-  /** Footer content */
-  children: React.ReactNode;
-  /** Additional CSS classes */
-  className?: string;
-}
-
-/** Modern Card component with TailwindCSS styling */
-export const Card = ({
-  variant = 'default',
-  padding = 'md',
-  hoverable = false,
-  clickable = false,
-  children,
-  className = '',
-  onClick,
-  ...props
-}: CardProps) => {
-  const baseClasses = 'rounded-lg transition-all duration-200';
-  
-  const variantClasses = {
-    default: 'bg-white',
-    outlined: 'bg-white border border-gray-200',
-    elevated: 'bg-white shadow-md',
-    filled: 'bg-gray-50 border border-gray-100',
-  };
-  
-  const paddingClasses = {
-    none: '',
-    sm: 'p-3',
-    md: 'p-4',
-    lg: 'p-6',
-    xl: 'p-8',
-  };
-  
-  const interactiveClasses = {
-    hoverable: hoverable ? 'hover:shadow-lg' : '',
-    clickable: clickable || onClick ? 'cursor-pointer hover:shadow-md' : '',
-  };
-  
-  const cardClasses = `${baseClasses} ${variantClasses[variant]} ${paddingClasses[padding]} ${interactiveClasses.hoverable} ${interactiveClasses.clickable} ${className}`.trim();
-  
-  const CardElement = onClick ? 'button' : 'div';
-  
+function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <CardElement
-      className={cardClasses}
-      onClick={onClick}
+    <div
+      data-slot="card"
+      className={cn(
+        "bg-white text-card-foreground flex flex-col gap-6 rounded-xl border border-gray-200 py-6 shadow-xl",
+        className
+      )}
       {...props}
-    >
-      {children}
-    </CardElement>
-  );
-};
+    />
+  )
+}
 
-/** Card Header component */
-export const CardHeader = ({ children, className = '' }: CardHeaderProps) => {
+function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className={`mb-4 ${className}`.trim()}>
-      {children}
-    </div>
-  );
-};
+    <div
+      data-slot="card-header"
+      className={cn("flex flex-col gap-1.5 px-6", className)}
+      {...props}
+    />
+  )
+}
 
-/** Card Content component */
-export const CardContent = ({ children, className = '' }: CardContentProps) => {
+function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className={`${className}`.trim()}>
-      {children}
-    </div>
-  );
-};
+    <div
+      data-slot="card-title"
+      className={cn("leading-none font-semibold", className)}
+      {...props}
+    />
+  )
+}
 
-/** Card Footer component */
-export const CardFooter = ({ children, className = '' }: CardFooterProps) => {
+function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div className={`mt-4 ${className}`.trim()}>
-      {children}
-    </div>
-  );
-};
+    <div
+      data-slot="card-description"
+      className={cn("text-muted-foreground text-sm", className)}
+      {...props}
+    />
+  )
+}
 
-// Export compound component
-Card.Header = CardHeader;
-Card.Content = CardContent;
-Card.Footer = CardFooter;
+function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("px-6", className)}
+      {...props}
+    />
+  )
+}
+
+function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn("flex items-center px-6", className)}
+      {...props}
+    />
+  )
+}
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
